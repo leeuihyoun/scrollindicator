@@ -49,7 +49,7 @@ useEffect(()=>{
 //스크롤 이벤트
 useEffect(()=>{
 	window.addEventListener('scroll',changeScrollEvent)
-})
+},[])
 function changeScrollEvent(){
 	let scrolled = document.documentElement.scrollTop;
 	//창이 작을수도 있으니  현재 열려있는 창의 스크롤 범위를 계산
