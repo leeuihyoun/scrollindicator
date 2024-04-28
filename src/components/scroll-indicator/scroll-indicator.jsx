@@ -49,6 +49,9 @@ useEffect(()=>{
 //스크롤 이벤트
 useEffect(()=>{
 	window.addEventListener('scroll',changeScrollEvent)
+	return(()=>{
+		window.removeEventListener('scroll',changeScrollEvent)
+	})
 },[])
 function changeScrollEvent(){
 	let scrolled = document.documentElement.scrollTop;
